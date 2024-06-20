@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "74333e93-47cf-4df1-8808-e62b85a5fd46",
+		"name": "Library App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26792436",
+		"_collection_link": "https://universal-astronaut-128258.postman.co/workspace/VineetApptunix~f7a5f393-40f5-46c0-8ee4-ca72c890afe9/collection/26792436-74333e93-47cf-4df1-8808-e62b85a5fd46?action=share&source=collection_link&creator=26792436"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "signup Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"utkarsh\",\r\n    \"age\": 22,\r\n    \"mobile\": \"0000000\",\r\n    \"email\": \"utkarsh@gmail.com\",\r\n    \"studentUid\": \"20BCS1553\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/student/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "student signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentUid\": \"20BCS1552\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/student/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All Books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NzEyMjYwMDg0ZmVlMzVmMDhmNDA1ZCIsImlhdCI6MTcxODY5MDQ3MiwiZXhwIjoxNzE4Njk0NDcyfQ.MrMPYpeYwO98TyuuvT4-yO07kqkK6s3tHBP3zZjLWNo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/student/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assign Books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NzEyMjYwMDg0ZmVlMzVmMDhmNDA1ZCIsImlhdCI6MTcxODY5MDQ3MiwiZXhwIjoxNzE4Njk0NDcyfQ.MrMPYpeYwO98TyuuvT4-yO07kqkK6s3tHBP3zZjLWNo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/student/assignBooks/6671229e084fee35f08f406c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"assignBooks",
+								"6671229e084fee35f08f406c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "return book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NzEyMjYwMDg0ZmVlMzVmMDhmNDA1ZCIsImlhdCI6MTcxODY5MDcyMSwiZXhwIjoxNzE4Njk0NzIxfQ.tlJjpPCCpJSsBaP-C_fSy8bVi4TiE18NIP4omoeJnB8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/student/returnBook/6671229a084fee35f08f4069",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"returnBook",
+								"6671229a084fee35f08f4069"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "write Review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NzEyMjYwMDg0ZmVlMzVmMDhmNDA1ZCIsImlhdCI6MTcxODY5MjAzNCwiZXhwIjoxNzE4Njk2MDM0fQ.AiAHNk013--h_IW4712Q682Y-HmTypVjAxS46dlT58c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"review\": \"this book is good\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/student/writeReview/66712292084fee35f08f4066",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"writeReview",
+								"66712292084fee35f08f4066"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBooksReviews",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "signup-Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Suresh\",\r\n    \"employeeId\": \"Emp1\",\r\n    \"email\": \"songs1000@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": \"Emp1\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmZmY2ViNjk3OWU0ODYyMTM5MTFmZiIsImlhdCI6MTcxODY5MDQyNywiZXhwIjoxNzE4Njk0NDI3fQ.4BmpQDF9Jbcrk4rcT_FTX_npQ7pfLAYDrOsSFeqg5dY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookName\": \"social\",\r\n    \"author\": \"Sk rana\",\r\n    \"language\": \"english\",\r\n    \"quantity\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/postbooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"postbooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit book details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmZjN2NiMDhjZWYzZjI4YWRkNWMwMyIsImlhdCI6MTcxODYwMTcxMiwiZXhwIjoxNzE4NjA1NzEyfQ.tZVTH1K3VoumOq3TdYeN5ITZnb6i39ox0849CGaOai4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookName\": \"english\",\r\n    \"author\": \"dk singhaniya\",\r\n    \"language\": \"english\",\r\n    \"quantity\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/editBooks/666fc81508cef3f28add5c09",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"editBooks",
+								"666fc81508cef3f28add5c09"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmZjN2NiMDhjZWYzZjI4YWRkNWMwMyIsImlhdCI6MTcxODYwMTcxMiwiZXhwIjoxNzE4NjA1NzEyfQ.tZVTH1K3VoumOq3TdYeN5ITZnb6i39ox0849CGaOai4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/admin/deleteBook/666fc81508cef3f28add5c09",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"deleteBook",
+								"666fc81508cef3f28add5c09"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

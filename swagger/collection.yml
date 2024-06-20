@@ -1,0 +1,208 @@
+openapi: 3.0.0
+info:
+  title: Library App
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+tags:
+  - name: Student
+  - name: admin
+paths:
+  /student/signup:
+    post:
+      tags:
+        - Student
+      summary: signup Student
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: utkarsh
+                age: 22
+                mobile: '0000000'
+                email: utkarsh@gmail.com
+                studentUid: 20BCS1553
+                password: '1234'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /student/signin:
+    post:
+      tags:
+        - Student
+      summary: student signin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                studentUid: 20BCS1552
+                password: '1234'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /student/books:
+    get:
+      tags:
+        - Student
+      summary: get All Books
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /student/assignBooks/6671229e084fee35f08f406c:
+    put:
+      tags:
+        - Student
+      summary: assign Books
+      requestBody:
+        content: {}
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /student/returnBook/6671229a084fee35f08f4069:
+    put:
+      tags:
+        - Student
+      summary: return book
+      requestBody:
+        content: {}
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /student/writeReview/66712292084fee35f08f4066:
+    put:
+      tags:
+        - Student
+      summary: write Review
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                review: this book is good
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin/signup:
+    post:
+      tags:
+        - admin
+      summary: signup-Admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: Suresh
+                employeeId: Emp1
+                email: songs1000@gmail.com
+                password: '1234'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin/signin:
+    post:
+      tags:
+        - admin
+      summary: signin Admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                employeeId: Emp1
+                password: '1234'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin/postbooks:
+    post:
+      tags:
+        - admin
+      summary: post-books
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                bookName: social
+                author: Sk rana
+                language: english
+                quantity: 10
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin/editBooks/666fc81508cef3f28add5c09:
+    put:
+      tags:
+        - admin
+      summary: edit book details
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                bookName: english
+                author: dk singhaniya
+                language: english
+                quantity: 12
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin/deleteBook/666fc81508cef3f28add5c09:
+    delete:
+      tags:
+        - admin
+      summary: delete book
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
